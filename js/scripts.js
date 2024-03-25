@@ -80,3 +80,12 @@ function newItem() {
 
   $("#list").sortable();
 }
+
+//adding keydown event to the input field
+$("#input").keydown(function (event) {
+  //key code 13 corresponds to Enter key
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    newItem();
+  }
+});
