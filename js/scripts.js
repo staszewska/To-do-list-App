@@ -76,4 +76,6 @@ function newItem() {
 
   //adding event handler to crossOutButton element
   crossOutButton.on("click", deleteListItem);
+
+  $("#list").sortable();
 }
