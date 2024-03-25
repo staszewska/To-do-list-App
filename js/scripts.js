@@ -51,6 +51,8 @@ function newItem() {
     //selecting list and appending new "li" element to it
     let list = $("#list");
     list.append(li);
+    //clearing the value input after adding an item to the list
+    $("input").val("");
   }
 
   //2. Crossing out an item from the list of items:
@@ -60,9 +62,8 @@ function newItem() {
   }
 
   // adding handler event (double click) to the list item
-  li.on("dblclick", function crossOut() {
-    li.toggle("strike");
-  });
+  li.on("dblclick", crossOut);
+  // li.toggle("strike");
 
   //3(i). Adding the delete button "X":
   let crossOutButton = $("<crossOutButton></crossOutButton>");
