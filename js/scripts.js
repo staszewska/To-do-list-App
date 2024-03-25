@@ -52,4 +52,15 @@ function newItem() {
     let list = $("#list");
     list.append(li);
   }
+
+  //2. Crossing out an item from the list of items:
+  //defining crossOut function
+  function crossOut() {
+    li.toggle("strike");
+  }
+
+  // adding handler event (double click) to the list item
+  li.on("dblclick", function crossOut() {
+    li.toggle("strike");
+  });
 }
